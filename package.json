@@ -1,0 +1,17 @@
+{
+  "name": "blowfish-wasm",
+  "version": "1.0.0",
+  "description": "WASM implementation of the Blowfish symmetric-key block cipher",
+  "main": "index.js",
+  "scripts": {
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "asbuild:untouched": "asc assembly/blowfish.ts -b bin/untouched_blowfish.wasm -t bin/untouched_blowfish.wat --use Math=JSMath",
+    "asbuild:optimized": "asc assembly/blowfish.ts -b bin/optimized_blowfish.wasm -t bin/optimized_blowfish.wat --sourceMap --validate --optimize --noDebug --use Math=JSMath",
+    "watch": "gulp"
+  },
+  "author": "Victor Kachan <victor.kachan@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript"
+  }
+}
