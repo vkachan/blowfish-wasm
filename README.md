@@ -1,5 +1,5 @@
 # blowfish-wasm
-Symmetric-key block cipher. Before usage needs to be compiled inot wasm with [AssemplyScript](https://github.com/AssemblyScript/assemblyscript).
+Symmetric-key block cipher. Before usage needs to be compiled into wasm with [AssemplyScript](https://github.com/AssemblyScript/assemblyscript).
 
 ### Install project dependencies
 
